@@ -3,18 +3,19 @@ notifications:
   email: false
 branches:
   except:
-    - /^v\d+\.\d+\.\d+$/
+  - "/^v\\d+\\.\\d+\\.\\d+$/"
 before_script:
-  - 'npm run greenkeeper:update-lockfile'
-  - npm ls >/dev/null
-after_script: 'npm run greenkeeper:upload-lockfile'
-after_success: 'npm run coverage:report'
+- npm run greenkeeper:update-lockfile
+- npm ls >/dev/null
+after_script: npm run greenkeeper:upload-lockfile
+after_success: npm run coverage:report
 deploy:
   provider: script
   skip_cleanup: true
   script: npx semantic-release
 env:
   global:
-    - FORCE_COLOR=1
-    - NPM_CONFIG_COLOR=always
-    - GK_LOCK_COMMIT_AMEND=true
+  - FORCE_COLOR=1
+  - NPM_CONFIG_COLOR=always
+  - GK_LOCK_COMMIT_AMEND=true
+  - secure: mJ3Gra/e4T52KD7zYKMEKNg4QiszFiYHV+joUYYf+eLJ7ysuTMZ0Cn413tR71M81WT4ybhq8Wi1YbkGKVYxCHgmPVpaoRZd+tGoOR44A+MiFpFPCoD2+SjKath8Q/fpmWg27ALERGvwARXzlf4LMNje3OozXJNw893ODskaWr3uYg3kHjMyeLJ66FUerYkkHhPxL3OqSiHas2mZpmFxFvqpxkMt+fxs0msUpHcbW8o9OYTHhzFwp1nGkhQr2qKcKC3nQ+oXYZnt2+6fdxyU1QkLbPPWlVoImb6Rhyhpc02eWXHD8M3BN5kVsVxg9s4ddPYaROpCxeu40DP940w4zad7VhKIvN7zBYbFRAahaLdmMqZy5fYqQZ1/r7uzJ5ASQyOZ3zJEOEWBpqPx1pxC5wJucPYnuXG48NkmAGfBNl25qgvIw483jxfohNGh5E48aeAA8SQyTrnhnKic7beJHWEXbz4cHxi4670aBUP+P/xiIMwtFrTwPYPwD6pSBw0+O9VBVzKERNw/u63YG00IVTAomCl7dnGnjmMrMO4O5lrMQRg1yHq6a86UI2gINuZ+y2bbP6Lo5FQZRdf2kp/1K/xeaESoXaoRdH7LXQmPsQNQJgfuElbtn3caua4kjbfNUKPZrlRBLenWOZpZzv/UapQKggPhUNyfur1q1CNCuwNw=
