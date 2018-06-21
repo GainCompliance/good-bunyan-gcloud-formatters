@@ -1,4 +1,5 @@
 import querystring from 'querystring';
+import {calculateLatencyFrom} from './latency';
 
 const withTag = (tag, data) => [data, `[${tag}]`];
 
@@ -24,7 +25,8 @@ export function response({method, instance, path, query, statusCode, responseTim
         referer: source.referer,
         userAgent: source.userAgent,
         remoteIp: source.remoteAddress,
-        protocol: httpVersion
+        protocol: httpVersion,
+        latency: calculateLatencyFrom(responseTime)
       }
     }
   ).concat([requestUrl]);

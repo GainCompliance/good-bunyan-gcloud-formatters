@@ -1,9 +1,20 @@
 import {assert} from 'chai';
 import any from '@travi/any';
+import sinon from 'sinon';
+import * as latencyCalculation from '../../src/latency';
 import {error, response} from '../../src';
 
 suite('formatters', () => {
+  let sandbox;
   const method = any.word();
+
+  setup(() => {
+    sandbox = sinon.createSandbox();
+
+    sandbox.stub(latencyCalculation, 'calculateLatencyFrom');
+  });
+
+  teardown(() => sandbox.restore());
 
   suite('response', () => {
     const path = any.word();
@@ -16,6 +27,8 @@ suite('formatters', () => {
       const userAgent = any.string();
       const remoteAddress = any.string();
       const httpVersion = any.string();
+      const latency = any.simpleObject();
+      latencyCalculation.calculateLatencyFrom.withArgs(responseTime).returns(latency);
 
       assert.deepEqual(
         response({
@@ -37,7 +50,8 @@ suite('formatters', () => {
               referer,
               userAgent,
               remoteIp: remoteAddress,
-              protocol: httpVersion
+              protocol: httpVersion,
+              latency
             }
           },
           '[response]',
