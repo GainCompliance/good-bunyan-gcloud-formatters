@@ -56,7 +56,7 @@ await server.register({
                     {log: '*', request: '*', response: '*', error: '*'},
                     {
                         logger: bunyan.createLogger({
-                            name: 'logger,
+                            name: 'logger',
                             streams: ['production' === process.env.NODE_ENV ? stackDriver.stream('trace') : {stream: process.stdout}]
                         }),
                         levels: {
