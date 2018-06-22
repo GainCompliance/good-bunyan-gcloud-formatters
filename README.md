@@ -1,7 +1,5 @@
 # good-bunyan-gcloud-formatters
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/GainCompliance/good-bunyan-gcloud-formatters.svg)](https://greenkeeper.io/)
-
 formatters for [good-bunyan](https://github.com/muzzley/good-bunyan) to enable
 [Stackdriver](https://cloud.google.com/logging/) to process
 [structured](https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry#HttpRequest)
@@ -19,7 +17,7 @@ for [Stackdriver](https://cloud.google.com/logging/)'s processing of structured
 logs.
 
 # Usage
- 
+
 <!-- consumer badges -->
 [![npm][npm-badge]][npm-link]
 [![MIT license][license-badge]][license-link]
@@ -83,6 +81,7 @@ await server.start();
 [![Commitizen friendly][commitizen-badge]][commitizen-link]
 [![semantic-release][semantic-release-badge]][semantic-release-link]
 [![PRs Welcome][PRs-badge]][PRs-link]
+[![Greenkeeper badge](https://badges.greenkeeper.io/GainCompliance/good-bunyan-gcloud-formatters.svg)](https://greenkeeper.io/)
 
 ## Dependencies
 
