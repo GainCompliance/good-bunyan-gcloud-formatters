@@ -1,5 +1,7 @@
 # good-bunyan-gcloud-formatters
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/GainCompliance/good-bunyan-gcloud-formatters.svg)](https://greenkeeper.io/)
+
 formatters for [good-bunyan](https://github.com/muzzley/good-bunyan) to enable
 [Stackdriver](https://cloud.google.com/logging/) to process
 [structured](https://cloud.google.com/logging/docs/reference/v2/rest/v2/LogEntry#HttpRequest)
