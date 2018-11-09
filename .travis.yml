@@ -4,7 +4,7 @@ notifications:
 branches:
   except:
   - "/^v\\d+\\.\\d+\\.\\d+$/"
-before_script: npm ls >/dev/null
+before_script: npm ls --production >/dev/null
 after_success: npm run coverage:report
 deploy:
   provider: script
