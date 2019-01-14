@@ -80,7 +80,7 @@ suite('formatters', () => {
 
     assert.deepEqual(
       error({error: err, method, url}),
-      [{err, httpRequest: {error: err, requestMethod: method, requestUrl: url}}, '[error]', errorMessage]
+      [{err, httpRequest: {requestMethod: method, requestUrl: url}}, '[error]', errorMessage]
     );
   });
 });
