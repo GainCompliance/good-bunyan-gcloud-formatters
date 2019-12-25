@@ -31,7 +31,8 @@
     }
   },
   "devDependencies": {
-    "@gaincompliance/eslint-config-gain": "^1.0.0",
+    "@gaincompliance/eslint-config": "1.0.28",
+    "@gaincompliance/eslint-config-mocha": "1.0.6",
     "@travi/any": "^2.0.0",
     "babel-preset-gain": "^1.1.3",
     "babel-register": "^6.26.0",

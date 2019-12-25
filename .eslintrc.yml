@@ -1,1 +1,3 @@
-extends: '@gaincompliance/gain/rules/es6'
+extends:
+  - '@gaincompliance'
+  - '@gaincompliance/mocha'
