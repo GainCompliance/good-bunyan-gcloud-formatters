@@ -4,7 +4,7 @@ notifications:
   email: false
 import:
   - source: GainCompliance/.travis-ci:authenticated-semantic-release.yml
-before_script: npm ls --production >/dev/null
+before_script: npm ls >/dev/null
 after_success: npm run coverage:report
 env:
   global:
