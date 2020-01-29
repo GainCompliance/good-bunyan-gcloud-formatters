@@ -39,7 +39,7 @@ export function error(payload) {
       err: payload.error,
       httpRequest: {
         requestMethod: payload.method,
-        requestUrl: payload.url
+        requestUrl: payload.url.toString()
       }
     }
   ).concat([payload.error.message]);

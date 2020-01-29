@@ -76,11 +76,12 @@ suite('formatters', () => {
   test('that the error formatter includes `httpRequest` for stackdriver', () => {
     const errorMessage = any.sentence();
     const err = {...any.simpleObject(), message: errorMessage};
-    const url = any.url();
+    const urlString = any.url();
+    const url = new URL(urlString);
 
     assert.deepEqual(
       error({error: err, method, url}),
-      [{err, httpRequest: {requestMethod: method, requestUrl: url}}, '[error]', errorMessage]
+      [{err, httpRequest: {requestMethod: method, requestUrl: urlString}}, '[error]', errorMessage]
     );
   });
 });
