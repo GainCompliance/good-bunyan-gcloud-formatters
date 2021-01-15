@@ -37,7 +37,7 @@
     "@gaincompliance/eslint-config-mocha": "1.0.8",
     "@travi/any": "2.0.15",
     "chai": "^4.2.0",
-    "codecov": "3.8.0",
+    "codecov": "3.8.1",
     "commitlint-config-gain": "1.0.27",
     "cz-conventional-changelog": "3.3.0",
     "husky": "4.3.0",
