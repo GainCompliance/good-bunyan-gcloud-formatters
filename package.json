@@ -33,7 +33,7 @@
   "devDependencies": {
     "@babel/register": "7.12.1",
     "@gaincompliance/babel-preset": "4.0.43",
-    "@gaincompliance/eslint-config": "1.0.32",
+    "@gaincompliance/eslint-config": "1.0.33",
     "@gaincompliance/eslint-config-mocha": "1.0.8",
     "@travi/any": "2.0.13",
     "chai": "^4.2.0",
