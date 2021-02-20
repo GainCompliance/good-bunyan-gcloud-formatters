@@ -35,7 +35,7 @@
     "@gaincompliance/babel-preset": "4.1.8",
     "@gaincompliance/eslint-config": "1.0.33",
     "@gaincompliance/eslint-config-mocha": "1.0.10",
-    "@travi/any": "2.0.15",
+    "@travi/any": "2.0.16",
     "chai": "^4.2.0",
     "codecov": "3.8.1",
     "commitlint-config-gain": "1.0.27",
