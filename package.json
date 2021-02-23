@@ -38,7 +38,7 @@
     "@travi/any": "2.0.16",
     "chai": "^4.2.0",
     "codecov": "3.8.1",
-    "commitlint-config-gain": "1.0.27",
+    "commitlint-config-gain": "1.0.28",
     "cz-conventional-changelog": "3.3.0",
     "husky": "5.1.1",
     "mocha": "8.3.0",
