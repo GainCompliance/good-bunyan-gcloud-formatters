@@ -31,7 +31,7 @@
     }
   },
   "devDependencies": {
-    "@babel/register": "7.13.14",
+    "@babel/register": "7.13.16",
     "@gaincompliance/babel-preset": "4.1.20",
     "@gaincompliance/eslint-config": "1.0.33",
     "@gaincompliance/eslint-config-mocha": "1.0.10",
